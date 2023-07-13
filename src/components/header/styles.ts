@@ -13,7 +13,7 @@ export const Container = styled.header`
 
 `;
 
-export const Content = styled.header`
+export const Content = styled.form`
 
   display: flex;
   align-items: center;
@@ -30,8 +30,9 @@ export const Content = styled.header`
     padding: 16px;
     display: flex;
     border-radius: 8px;
-    border: 1px solid var(--gray-700);
-    background: var(--gray-500);
+    border: 1px solid var(--gray-400);
+    background: var(--gray-400);
+    color: #fff;
   }
 
   button {

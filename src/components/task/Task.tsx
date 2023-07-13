@@ -1,7 +1,12 @@
+import { ITasks } from '../../App';
 import { Container, CheckButton, DeleteButton } from './styles';
 import { TbTrash } from 'react-icons/tb';
 
-export function Task(){
+interface Props {
+  task: ITasks
+}
+
+export function Task({ task }: Props){
     return(
         <Container>
           <CheckButton>
@@ -9,7 +14,7 @@ export function Task(){
           </CheckButton>
 
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry
+            {task.title}
           </p>
 
           <DeleteButton>

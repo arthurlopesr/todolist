@@ -1,25 +1,39 @@
+import { ITasks } from '../App';
 import { Task } from '../components/task/Task';
 import { Container, HeaderContainer, Content, TasksContainer } from './styles';
 
-export function Tasks() {
+interface TasksProps {
+  tasks: ITasks[];
+}
+
+export function Tasks({ tasks }: TasksProps) {
+  const taskQuantity = tasks.length;
+  const taskComplated = tasks.filter((task) => task.isCompleted).length;
+
   return (
     <Container>
       <HeaderContainer>
         <Content>
           <p>Tarefas criadas</p>
-          <span>10</span>
+          <span>{taskQuantity}</span>
         </Content>
         <Content>
           <p className='textPurple'>Concluídas</p>
-          <span>2 de 10</span>
+
+          <span>
+             {taskComplated} de {taskQuantity}
+          </span>
         </Content>
       </HeaderContainer>
 
-        <TasksContainer>
-          <Task />
-          <Task />
-        </TasksContainer>
-
+      <TasksContainer>
+        {tasks.map((task) => (
+          <Task
+            key={task.id}
+            task={task}
+          />
+        ))}
+      </TasksContainer>
     </Container>
   )
 }
