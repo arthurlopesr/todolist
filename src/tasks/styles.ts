@@ -45,3 +45,24 @@ export const TasksContainer = styled.div`
   flex-direction: column;
   gap: 0.75rem;
 `;
+
+export const WithoutTasksContainer = styled.section`
+  margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  color: var(--gray-300);
+  text-align: center;
+
+  svg {
+    opacity: 0.3;
+  }
+
+  p {
+    margin-top: 1rem;
+    font-weight: 700;
+  }
+`;
+
