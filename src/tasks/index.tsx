@@ -4,9 +4,10 @@ import { Container, HeaderContainer, Content, TasksContainer } from './styles';
 
 interface TasksProps {
   tasks: ITasks[];
+  onDelete: (taskId: string) => void;
 }
 
-export function Tasks({ tasks }: TasksProps) {
+export function Tasks({ tasks, onDelete }: TasksProps) {
   const taskQuantity = tasks.length;
   const taskComplated = tasks.filter((task) => task.isCompleted).length;
 
@@ -31,6 +32,7 @@ export function Tasks({ tasks }: TasksProps) {
           <Task
             key={task.id}
             task={task}
+            onDelete={onDelete}
           />
         ))}
       </TasksContainer>

@@ -4,9 +4,10 @@ import { TbTrash } from 'react-icons/tb';
 
 interface Props {
   task: ITasks
+  onDelete: (taskId: string) => void;
 }
 
-export function Task({ task }: Props){
+export function Task({ task, onDelete }: Props){
     return(
         <Container>
           <CheckButton>
@@ -17,7 +18,9 @@ export function Task({ task }: Props){
             {task.title}
           </p>
 
-          <DeleteButton>
+          <DeleteButton
+            onClick={() => onDelete(task.id)}
+          >
             <TbTrash size={20}/>
           </DeleteButton>
 

@@ -35,11 +35,16 @@ function App() {
     ]);
   }
 
+  function deleteTaskById(taskId: string) {
+    const newTasks = tasks.filter((task) => task.id !== taskId);
+    setTasks(newTasks);
+  }
   return (
     <>
       <Header onAddTask={addTask} />
       <Tasks
         tasks={tasks}
+        onDelete={deleteTaskById}
       />
       <GlobalStyles />
     </>
