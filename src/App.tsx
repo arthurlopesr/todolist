@@ -7,7 +7,7 @@ export interface ITasks {
   id: string;
   title: string;
   isCompleted: boolean;
-}
+};
 
 function App() {
   const [tasks, setTasks] = useState([
@@ -33,10 +33,23 @@ function App() {
         isCompleted: false,
       }
     ]);
-  }
+  };
 
   function deleteTaskById(taskId: string) {
     const newTasks = tasks.filter((task) => task.id !== taskId);
+    setTasks(newTasks);
+  };
+
+  function toggleTaskCompletedById(taskId: string) {
+    const newTasks = tasks.map(task => {
+      if (task.id === taskId) {
+        return {
+          ...task,
+          isCompleted: !task.isCompleted
+        }
+      }
+      return task;
+    });
     setTasks(newTasks);
   }
   return (
@@ -45,10 +58,11 @@ function App() {
       <Tasks
         tasks={tasks}
         onDelete={deleteTaskById}
+        onComplete={toggleTaskCompletedById}
       />
       <GlobalStyles />
     </>
   )
 }
 
-export default App
+export default App;

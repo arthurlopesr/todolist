@@ -37,7 +37,27 @@ export const CheckButton = styled.button`
     border: 1px solid var(--blue);
     border-radius: 50%;
   }
+
+  svg {
+    width: 100%;
+    height: 100%;
+    color: var(--purple);
+  }
 `;
+
+export const TaskText = styled.p`
+  font-size: 0.8rem;
+  line-height: 1.18rem;
+  color: var(--gray-100);
+  margin-right: auto;
+`;
+
+
+export const TaskTaxtCompleted = styled.p`
+  text-decoration: line-through;
+  color: red;
+`;
+
 
 export const DeleteButton = styled.button`
   background: none;
