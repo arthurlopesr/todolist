@@ -50,6 +50,6 @@ Você pode acessar o design inicial deesse projeto pelo link abaixo:
     <img src="https://img.shields.io/badge/instagram-%23E4405F.svg?&style=for-the-badge&logo=instagram&logoColor=white" />        
   </a>&nbsp;&nbsp;
  <a href="mailto:arthurlopr12@gmail.com">
-    <img src="https://img.shields.io/badge/Microsoft_Outlook-0078D4?style=for-the-badge&logo=microsoft-outlook&logoColor=white" />        
+    <img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" />        
   </a>&nbsp;&nbsp; 
 </div>
