@@ -18,7 +18,7 @@
 </div> 
 &nbsp;
 
-### 🛠️ Nesse projeto foi utilizado
+### 🛠️ Nesse projeto foi utilizado:
 
 * [React](https://pt-br.reactjs.org/)
 * [Vite JS](https://vitejs.dev/)
